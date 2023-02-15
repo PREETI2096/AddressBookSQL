@@ -143,3 +143,11 @@ mysql> select count(State) from AddressBook;
 |            4 |
 +--------------+
 1 row in set (0.00 sec)
+ select FirstName from AddressBook where City = "Dharwad" order by FirstName;
++-----------+
+| FirstName |
++-----------+
+| Dheeraj   |
+| Preeti    |
++-----------+
+2 rows in set (0.01 sec)
