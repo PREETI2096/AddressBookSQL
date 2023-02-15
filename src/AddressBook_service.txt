@@ -184,3 +184,18 @@ mysql> select * from AddressBook;
 | Ravikiran | Avasankh | Tiruchpalli    | Chennai   | TamilNadu | 670609 |    9686978641 | ravi@gmail.com | Family |
 +-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+--------+
 4 rows in set (0.00 sec)
+select count(Type) from AddressBook where Type= "Family";
++-------------+
+| count(Type) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(Type) from AddressBook where Type= "Friend";
++-------------+
+| count(Type) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
