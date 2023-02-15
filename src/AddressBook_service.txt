@@ -51,3 +51,25 @@ mysql> desc AddressBook;
 | Email_Id      | varchar(300) | YES  |     | NULL    |       |
 +---------------+--------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
+ insert into AddressBook( FirstName, LastName, Address,City,State, Zip,Mobile_Number, Email_Id) values("Preeti","Ghatage","Navalur","Dharwad","Karnataka",580009,8553266354,"pree@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into AddressBook( FirstName, LastName, Address,City,State, Zip,Mobile_Number, Email_Id) values("Shruti","Deshmukh","Vijaya Ngar","Belgaum","Karnataka",562009,8554783354,"shru@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into AddressBook( FirstName, LastName, Address,City,State, Zip,Mobile_Number, Email_Id) values("Usha","Ahirwal","Rajendra nagar","New Delhi","Delhi",110609,985266349,"usha@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into AddressBook( FirstName, LastName, Address,City,State, Zip,Mobile_Number, Email_Id) values("Ravikiran","Avasankh","Tiruchpalli","Chennai","TamilNadu",670609,9686978641,"ravi@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+
+| FirstName | LastName | Address        | City      | State     | Zip    | Mobile_Number | Email_Id       |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+
+| Preeti    | Ghatage  | Navalur        | Dharwad   | Karnataka | 580009 |    8553266354 | pree@gmail.com |
+| Shruti    | Deshmukh | Vijaya Ngar    | Belgaum   | Karnataka | 562009 |    8554783354 | shru@gmail.com |
+| Usha      | Ahirwal  | Rajendra nagar | New Delhi | Delhi     | 110609 |     985266349 | usha@gmail.com |
+| Ravikiran | Avasankh | Tiruchpalli    | Chennai   | TamilNadu | 670609 |    9686978641 | ravi@gmail.com |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+
+4 rows in set (0.00 sec)
