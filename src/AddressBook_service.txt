@@ -88,3 +88,16 @@ mysql> select * from AddressBook;
 | Shravana  | Narasannavar | Nizam nagar    | Vaizag    | Andrapradesh | 342009 |    8567892139 | shravz@gmail.com |
 +-----------+--------------+----------------+-----------+--------------+--------+---------------+------------------+
 5 rows in set (0.00 sec)
+ delete from AddressBook where FirstName="Shravana";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+
+| FirstName | LastName | Address        | City      | State     | Zip    | Mobile_Number | Email_Id       |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+
+| Preeti    | Ghatage  | Navalur        | Dharwad   | Karnataka | 580009 |    8553266354 | pree@gmail.com |
+| Dheeraj   | Deshmukh | Vijaya Ngar    | Belgaum   | Karnataka | 562009 |    8554783354 | shru@gmail.com |
+| Usha      | Ahirwal  | Rajendra nagar | New Delhi | Delhi     | 110609 |     985266349 | usha@gmail.com |
+| Ravikiran | Avasankh | Tiruchpalli    | Chennai   | TamilNadu | 670609 |    9686978641 | ravi@gmail.com |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+
+4 rows in set (0.00 sec)
