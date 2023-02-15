@@ -151,3 +151,36 @@ mysql> select count(State) from AddressBook;
 | Preeti    |
 +-----------+
 2 rows in set (0.01 sec)
+alter table AddressBook add Type varchar(50);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from AddressBook;
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+------+
+| FirstName | LastName | Address        | City      | State     | Zip    | Mobile_Number | Email_Id       | Type |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+------+
+| Preeti    | Ghatage  | Navalur        | Dharwad   | Karnataka | 580009 |    8553266354 | pree@gmail.com | NULL |
+| Dheeraj   | Deshmukh | Vijaya Ngar    | Dharwad   | Karnataka | 562009 |    8554783354 | shru@gmail.com | NULL |
+| Usha      | Ahirwal  | Rajendra nagar | New Delhi | Delhi     | 110609 |     985266349 | usha@gmail.com | NULL |
+| Ravikiran | Avasankh | Tiruchpalli    | Chennai   | TamilNadu | 670609 |    9686978641 | ravi@gmail.com | NULL |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+------+
+4 rows in set (0.00 sec)
+
+mysql> update AddressBook set Type="Family" where FirstName ="Ravikiran" or FirstName ="Preeti";
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update AddressBook set Type="Friend" where FirstName ="Usha" or FirstName ="Dheeraj";
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from AddressBook;
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+--------+
+| FirstName | LastName | Address        | City      | State     | Zip    | Mobile_Number | Email_Id       | Type   |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+--------+
+| Preeti    | Ghatage  | Navalur        | Dharwad   | Karnataka | 580009 |    8553266354 | pree@gmail.com | Family |
+| Dheeraj   | Deshmukh | Vijaya Ngar    | Dharwad   | Karnataka | 562009 |    8554783354 | shru@gmail.com | Friend |
+| Usha      | Ahirwal  | Rajendra nagar | New Delhi | Delhi     | 110609 |     985266349 | usha@gmail.com | Friend |
+| Ravikiran | Avasankh | Tiruchpalli    | Chennai   | TamilNadu | 670609 |    9686978641 | ravi@gmail.com | Family |
++-----------+----------+----------------+-----------+-----------+--------+---------------+----------------+--------+
+4 rows in set (0.00 sec)
