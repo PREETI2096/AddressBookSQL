@@ -25,3 +25,29 @@ mysql> show databases;
 | sys                 |
 +---------------------+
 6 rows in set (0.00 sec)
+ create table AddressBook(
+    -> FirstName varchar(250),
+    -> LastName varchar(250),
+    -> Address varchar(300),
+    -> City varchar(100),
+    -> State varchar(100),
+    -> Zip int,
+    -> Mobile_Number bigint,
+    -> Email_Id varchar(300)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc AddressBook;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| FirstName     | varchar(250) | YES  |     | NULL    |       |
+| LastName      | varchar(250) | YES  |     | NULL    |       |
+| Address       | varchar(300) | YES  |     | NULL    |       |
+| City          | varchar(100) | YES  |     | NULL    |       |
+| State         | varchar(100) | YES  |     | NULL    |       |
+| Zip           | int          | YES  |     | NULL    |       |
+| Mobile_Number | bigint       | YES  |     | NULL    |       |
+| Email_Id      | varchar(300) | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
