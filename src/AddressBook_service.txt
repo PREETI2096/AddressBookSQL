@@ -128,3 +128,18 @@ mysql> select FirstName from AddressBook where State = "Karnataka";
 | Dheeraj   |
 +-----------+
 2 rows in set (0.00 sec)
+ select count(City) from AddressBook;
++-------------+
+| count(City) |
++-------------+
+|           4 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(State) from AddressBook;
++--------------+
+| count(State) |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.00 sec)
