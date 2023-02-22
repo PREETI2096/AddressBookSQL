@@ -191,6 +191,35 @@ select count(Type) from AddressBook where Type= "Family";
 |           2 |
 +-------------+
 1 row in set (0.00 sec)
+ INSERT INTO addressbook (first_name, last_name, Address, City, State,zip,phone_number,email,type) VALUES ('Shreyansh', 'Ghatage', 'Viyagiri', 'Bagalkot', 'Karnataka',505002,956554875, 'shri@gmail.com','friend');
+ERROR 1054 (42S22): Unknown column 'first_name' in 'field list'
+mysql> INSERT INTO addressbook (FirstName, LastName, Address, City, State,Zip,Mobile_Number,Email_Id,Type) VALUES ('Shreyansh', 'Ghatage', 'Viyagiri', 'Bagalkot', 'Karnataka',505002,956554875, 'shri@gmail.com','friend');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO addressbook (FirstName, LastName, Address, City, State,Zip,Mobile_Number,Email_Id,Type) VALUES ('Shreyansh', 'Ghatage', 'Viyagiri', 'Bagalkot', 'Karnataka',505002,956554875, 'shri@gmail.com','family');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select Type from addressbook where FirstName = "Shreyansh";
++--------+
+| Type   |
++--------+
+| friend |
+| family |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> select FirstName ,Type from addressbook ;
++-----------+--------+
+| FirstName | Type   |
++-----------+--------+
+| Preeti    | Family |
+| Dheeraj   | Friend |
+| Usha      | Friend |
+| Ravikiran | Family |
+| Shreyansh | friend |
+| Shreyansh | family |
++-----------+--------+
+6 rows in set (0.00 sec)
 
 mysql> select count(Type) from AddressBook where Type= "Friend";
 +-------------+
